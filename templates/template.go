@@ -20,6 +20,11 @@ func NewInput() *Input {
 	return ret
 }
 
+func (input *Input) Text() string {
+	input.Scanner.Scan()
+	return input.Scanner.Text()
+}
+
 func (input *Input) Int() int {
 	input.Scanner.Scan()
 	ret, err := strconv.Atoi(input.Scanner.Text())
@@ -38,6 +43,6 @@ func (input *Input) IntSlice(num int) []int {
 }
 
 func main() {
-	//inputs := NewInput()
-	//fmt.Println()
+	// inputs := NewInput()
+	// fmt.Println()
 }
